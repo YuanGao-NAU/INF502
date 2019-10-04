@@ -1,5 +1,6 @@
 {
-	"elements":[
+    "elements":
+    [
         {
             "symbol": "H",
             "name": "Hydrogen",
@@ -833,5 +834,5 @@
             "row": 8,
             "column": 1
         }
-	]
+    ]
 }
