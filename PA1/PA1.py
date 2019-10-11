@@ -44,7 +44,7 @@ def max_shift(str1, str2):
 				flag = 1
 			else:
 				flag = 0
-				print("Shifts can not be negative and can not be bigger than the length of input strings : %d" %(max_value-1))
+				print("\033[0;31;40mShifts can not be negative and can not be bigger than \033[0;32;40m%d (the biggest shift)\033[0m\033[0m" %(max_value-1))
 				continue
 		if flag == 0:
 			continue
@@ -82,7 +82,7 @@ def get_sequence(filename):
 	print(line)
 	for char in line:
 		if char != 'A' and char != 'G' and char != 'C' and char != 'T':
-			res = input("invalid character(s) detected, continue?(y/n)")
+			res = input("\033[0;31;40minvalid character(s) detected, continue?(y/n)\033[0m")
 			if res == "y":
 				return line
 			else:
@@ -132,11 +132,11 @@ def sim2(str1, str2, shift):
 				cnt = 0
 			list_chain_tmp.append(cnt)
 		cnt = 0
-		print(list_chain_tmp)
+		#print(list_chain_tmp)
 		list_chain_tmp.sort(reverse=True)
 		list_chain.append(list_chain_tmp[0])
 		list_chain_tmp.clear()	
-	print(list_chain)
+	#print(list_chain)
 	return list_chain
 
 def sim_output(str1, str2, list_chain1, list_chain2):
@@ -167,8 +167,8 @@ def sim_output(str1, str2, list_chain1, list_chain2):
 			list_max2.append(shift_tmp2)
 		shift_tmp2 = shift_tmp2+1
 	
-	print(list_max1)
-	print(list_max2)
+	#print(list_max1)
+	#print(list_max2)
 
 	if max_value1 > max_value2:
 		for item in list_max1:
