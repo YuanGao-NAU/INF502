@@ -8,6 +8,7 @@ class ant_bait:
         self.stake = stake
         self.species = species
         self.abundance = abundance
+        self.species_code = species
 
     def __str__(self):
         return self.species + " - " + self.month + ", " + self.year + ": " + self.abundance
@@ -57,12 +58,30 @@ def replace_species(ant_bait_list, ant_species_list):
             if item1.species == item2.species_code:
                 item1.replace_attribute(item2.species)
 
+def aver_of_certain_species(ant_bait_list, species_code):
+    total = 0
+    cnt = 0
+    average = 0
+    for item in ant_bait_list:
+        if item.species_code == species_code:
+            cnt = cnt + 1
+            total = total + int(item.abundance)
+    try:
+        average = total / cnt
+    except ZeroDivisionError:
+        print("devided by zero, no assigned species abundance found!")
+        return -1
+    else:
+        return average
+
 if __name__ == "__main__":
-    list0 = read_ant_bait(r"C:\Users\yg336\Desktop\INF502\midterm\\ant_bait.csv")
-    list1 = read_ant_species(r"C:\Users\yg336\Desktop\INF502\midterm\\ant_species.csv")
+    list0 = read_ant_bait("./ant_bait.csv")
+    list1 = read_ant_species("./ant_species.csv")
     #for item in list0:
         #print(item)
     replace_species(list0, list1)
     print("------------------------------------------------------------------------------")
     #for item in list0:
         #print(item)
+    av = aver_of_certain_species(list0, "cono bico")
+    print(av)
