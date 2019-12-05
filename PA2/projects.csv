@@ -1,0 +1,4 @@
+owner,name,description,homepage,forks,watchers,date_of_collection,license
+igorsteinmacher,INF502-Fall2019,Repo for information about CS502 Graduate Course: Software Development Methodologies @ NAU,None,29,3,2019-12-05 15:36:07,"{'key': 'unlicense', 'name': 'The Unlicense', 'spdx_id': 'Unlicense', 'url': 'https://api.github.com/licenses/unlicense', 'node_id': 'MDc6TGljZW5zZTE1'}"
+rails,rails,Ruby on Rails,https://rubyonrails.org,18050,44623,2019-12-05 15:37:17,"{'key': 'mit', 'name': 'MIT License', 'spdx_id': 'MIT', 'url': 'https://api.github.com/licenses/mit', 'node_id': 'MDc6TGljZW5zZTEz'}"
+jaywcjlove,linux-command,Linux命令大全搜索工具，内容包含Linux命令手册、详解、学习、搜集。https://git.io/linux,https://git.io/linux,2673,11104,2019-12-05 15:39:08,"{'key': 'mit', 'name': 'MIT License', 'spdx_id': 'MIT', 'url': 'https://api.github.com/licenses/mit', 'node_id': 'MDc6TGljZW5zZTEz'}"
